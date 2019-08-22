@@ -1,3 +1,6 @@
 logs/cara.log
 config.py
-
+resources/idols.json
+.idea/
+__pycache__/
+test.py
