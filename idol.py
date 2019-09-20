@@ -58,7 +58,11 @@ class IdolsList:
 
     def add_idol(self, owner, author):
         self.idols.append(Idol(owner, author))
+        self.order()
         self.save_to_json()
+
+    def order(self):
+        self.idols.sort(key=lambda x: x.owner)
 
     def del_idol_by_owner(self, owner):
         before_len = len(self.idols)
